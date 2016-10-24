@@ -7,12 +7,10 @@ except ImportError:
 #import twitter libs
 from twitter import Twitter, OAuth, TwitterHTTPError, TwitterStream
 
-ACCESS_TOKEN = 'xxxxxx'
-ACCESS_SECRET = 'xxxxxx'
-CONSUMER_SECRET = 'xxxxxxx'
-CONSUMER_KEY = 'xxxxxx'
+import config
 
-oauth= OAuth(ACCESS_TOKEN,ACCESS_SECRET, CONSUMER_KEY, CONSUMER_SECRET)
+
+oauth= OAuth(config.ACCESS_TOKEN, config.ACCESS_SECRET, config.CONSUMER_KEY, config.CONSUMER_SECRET)
 
 #start twitter stream
 twitter = Twitter(auth=oauth)
